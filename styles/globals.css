@@ -29,3 +29,9 @@ a {
     background: black;
   }
 }
+:root {
+  --text-purple: rgb(67, 56, 202);
+  --text-purple-dark: rgb(79, 70, 229);
+  --text-black: rgb(17, 24, 39);
+  --text-white-100: rgb(229, 231, 235);
+}
