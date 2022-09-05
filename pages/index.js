@@ -12,7 +12,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1 className={styles.title}>Coffee App</h1>
-        <Banner />
+        <Banner buttonText="View stores nearby" />
       </main>
     </div>
   );
