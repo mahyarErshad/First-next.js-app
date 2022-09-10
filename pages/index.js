@@ -13,7 +13,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Banner buttonText="View stores nearby" />
-        <Card image="/public/static/test.jpg" title="test" link="/coffee-stores/test" />
+        <Card image="/static/test.jpg" title="test" link="/coffee-stores/test" />
       </main>
     </div>
   );
