@@ -5,9 +5,9 @@ function Card(props) {
   return (
     <>
       <Link href={props.link}>
-        <a>
-          <h2>{props.title}</h2>
-          <Image src={props.image} width={260} height={160} />
+        <a className={styles.cardLink}>
+          <h2 className={styles.cardHeader}>{props.title}</h2>
+          <Image className={styles.cardImage} src={props.image} width={260} height={160} />
         </a>
       </Link>
     </>
