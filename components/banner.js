@@ -1,5 +1,4 @@
 import styles from "../styles/Banner.module.css";
-import Card from "./Card";
 function Banner(props) {
   return (
     <div className={styles.container}>
@@ -8,7 +7,6 @@ function Banner(props) {
       </h1>
       <p className={styles.subTitle}>Discover your local coffee shops</p>
       <button className={styles.button}>{props.buttonText}</button>
-      <Card />
     </div>
   );
 }
