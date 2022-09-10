@@ -6,8 +6,14 @@ function Card(props) {
     <>
       <Link href={props.link}>
         <a className={styles.cardLink}>
-          <h2 className={styles.cardHeader}>{props.title}</h2>
-          <Image className={styles.cardImage} src={props.image} width={260} height={160} />
+          <div className={styles.container}>
+            <div className={styles.cardHeaderWrapper}>
+              <h2 className={styles.cardHeader}>{props.title}</h2>
+            </div>
+            <div className={styles.cardImageWrapper}>
+              <Image className={styles.cardImage} src={props.image} width={260} height={160} />
+            </div>
+          </div>
         </a>
       </Link>
     </>
