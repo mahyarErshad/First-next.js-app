@@ -13,7 +13,9 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <Banner buttonText="View stores nearby" />
-        <Card image="/static/test.jpg" title="test" link="/coffee-stores/test" />
+        <div className={styles.cardLayout}>
+          <Card image="/static/test.jpg" title="test" link="/coffee-stores/test" className={styles.card} />
+        </div>
       </main>
     </div>
   );
