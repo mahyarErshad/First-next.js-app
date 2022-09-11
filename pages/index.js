@@ -2,6 +2,7 @@ import Head from "next/head";
 import Banner from "../components/banner";
 import Card from "../components/Card";
 import styles from "../styles/Home.module.css";
+import database from "../db/database.json";
 
 export default function Home() {
   return (
@@ -14,7 +15,9 @@ export default function Home() {
       <main className={styles.main}>
         <Banner buttonText="View stores nearby" />
         <div className={styles.cardLayout}>
-          <Card image="/static/test.jpg" title="test" link="/coffee-stores/test" className={styles.card} />
+          {database.map((store) => {
+            return <Card image={store.imgUrl} title={store.name} link={`/coffee-stores/${store.id}`} className={styles.card} />;
+          })}
         </div>
       </main>
     </div>
