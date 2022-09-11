@@ -12,7 +12,7 @@ export async function getStaticProps(context) {
   };
 }
 
-export default function Home() {
+export default function Home(props) {
   return (
     <div className={styles.container}>
       <Head>
@@ -23,7 +23,7 @@ export default function Home() {
       <main className={styles.main}>
         <Banner buttonText="View stores nearby" />
         <div className={styles.cardLayout}>
-          {stores.map((store) => {
+          {props.stores.map((store) => {
             return <Card key={store.id} image={store.imgUrl} title={store.name} link={`/coffee-stores/${store.id}`} className={styles.card} />;
           })}
         </div>
