@@ -10,7 +10,10 @@ export function getStaticProps(staticProps) {
   }
 }
 export function getStaticPaths() {
-  path: [{ params: { id: 1 } }, { params: { id: 2 } }];
+  return {
+    path: [{ params: { id: 1 } }, { params: { id: 2 } }],
+    fallback: false,
+  };
 }
 
 function coffeeStores() {
