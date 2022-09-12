@@ -13,7 +13,7 @@ export async function getStaticProps(staticProps) {
 }
 export async function getStaticPaths() {
   return {
-    paths: [{ params: { id: "1" } }],
+    paths: [{ params: { id: "1" } }, { params: { id: "0" } }],
     fallback: false,
   };
 }
