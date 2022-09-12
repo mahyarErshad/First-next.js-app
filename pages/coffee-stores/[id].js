@@ -14,8 +14,15 @@ export async function getStaticProps(staticProps) {
   };
 }
 export async function getStaticPaths() {
+  const paths = stores.map((store) => {
+    return {
+      params: {
+        id: store.id.toString(),
+      },
+    };
+  });
   return {
-    paths: [{ params: { id: "1" } }, { params: { id: "0" } }],
+    paths,
     fallback: false,
   };
 }
