@@ -1,12 +1,12 @@
 import Link from "next/link";
 import stores from "../../db/database.json";
 
-export function getStaticProps(staticProps) {
+export async function getStaticProps(staticProps) {
   const params = staticProps.params;
   return {
     props: {
       coffeeStore: stores.find((store) => {
-        return store.id === params.id;
+        return store.id === 1;
       }),
     },
   };
