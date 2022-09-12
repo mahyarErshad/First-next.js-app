@@ -3,15 +3,17 @@ import stores from "../../db/database.json";
 
 export function getStaticProps(staticProps) {
   const params = staticProps.params;
-  props: {
-    coffeeStore: stores.find((store) => {
-      return store.id === params.id;
-    });
-  }
-}
-export function getStaticPaths() {
   return {
-    path: [{ params: { id: 1 } }, { params: { id: 2 } }],
+    props: {
+      coffeeStore: stores.find((store) => {
+        return store.id === params.id;
+      }),
+    },
+  };
+}
+export async function getStaticPaths() {
+  return {
+    paths: [{ params: { id: "1" } }],
     fallback: false,
   };
 }
