@@ -29,10 +29,10 @@ export async function getStaticPaths() {
 
 function coffeeStores(props) {
   const router = useRouter();
-  const { name, address, neighbourhood } = props.coffeeStore;
   if (router.isFallback) {
     return <div>loading...</div>;
   }
+  const { name, address, neighbourhood } = props.coffeeStore;
   return (
     <>
       <Head>
