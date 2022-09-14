@@ -36,15 +36,17 @@ function coffeeStores(props) {
   const { name, address, neighbourhood } = props.coffeeStore;
   return (
     <>
-      <Head>
-        <title>{name}</title>
-      </Head>
-      <Link href="/">
-        <a>Back to home</a>
-      </Link>
-      <p>{name}</p>
-      <p>{address}</p>
-      <p>{neighbourhood}</p>
+      <div className={styles.layout}>
+        <Head>
+          <title>{name}</title>
+        </Head>
+        <Link href="/">
+          <a>Back to home</a>
+        </Link>
+        <p>{name}</p>
+        <p>{address}</p>
+        <p>{neighbourhood}</p>
+      </div>
     </>
   );
 }
