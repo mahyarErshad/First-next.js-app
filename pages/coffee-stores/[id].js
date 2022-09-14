@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import stores from "../../db/database.json";
@@ -33,7 +34,7 @@ function coffeeStores(props) {
   if (router.isFallback) {
     return <div>loading...</div>;
   }
-  const { name, address, neighbourhood } = props.coffeeStore;
+  const { name, address, neighbourhood, imgUrl } = props.coffeeStore;
   return (
     <>
       <div className={styles.layout}>
@@ -45,6 +46,7 @@ function coffeeStores(props) {
             <a>Back to home</a>
           </Link>
           <p>{name}</p>
+          <Image src={imgUrl} width={600} height={360} className={styles.storeImg} alt={name} />
         </div>
         <div className={styles.col2}>
           <p>{address}</p>
