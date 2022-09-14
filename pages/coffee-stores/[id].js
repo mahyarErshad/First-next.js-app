@@ -59,15 +59,15 @@ function coffeeStores(props) {
           </div>
           <div className={cls("glass", styles.col2)}>
             <div className={styles.iconWrapper}>
-              <Image src="https://github.com/kulkarniankita/discover-coffee-stores/blob/main/public/static/icons/places.svg" alt="address" width={24} height={24} />
+              <Image src="/static/icons/places.svg" alt="address" width={24} height={24} />
               <p className={styles.text}>{address}</p>
             </div>
             <div className={styles.iconWrapper}>
-              <Image src="https://github.com/kulkarniankita/discover-coffee-stores/blob/main/public/static/icons/nearMe.svg" alt="near me" width={24} height={24} />
+              <Image src="/static/icons/nearMe.svg" alt="near me" width={24} height={24} />
               <p className={styles.text}>{neighbourhood}</p>
             </div>
             <div className={styles.iconWrapper}>
-              <Image src="https://github.com/kulkarniankita/discover-coffee-stores/blob/main/public/static/icons/star.svg" alt="Star" width={24} height={24} />
+              <Image src="/static/icons/star.svg" alt="Star" width={24} height={24} />
               <p className={styles.text}>1</p>
             </div>
             <button className={styles.upvoteButton} onClick={incrementLikes}>
