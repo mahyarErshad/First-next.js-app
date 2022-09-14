@@ -40,12 +40,16 @@ function coffeeStores(props) {
         <Head>
           <title>{name}</title>
         </Head>
-        <Link href="/">
-          <a>Back to home</a>
-        </Link>
-        <p>{name}</p>
-        <p>{address}</p>
-        <p>{neighbourhood}</p>
+        <div className={styles.col1}>
+          <Link href="/">
+            <a>Back to home</a>
+          </Link>
+          <p>{name}</p>
+        </div>
+        <div className={styles.col2}>
+          <p>{address}</p>
+          <p>{neighbourhood}</p>
+        </div>
       </div>
     </>
   );
