@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useRouter } from "next/router";
 import stores from "../../db/database.json";
 import styles from "../../styles/coffeeStore.module.css";
+import cls from "classnames";
 
 export async function getStaticProps(staticProps) {
   const params = staticProps.params;
@@ -35,6 +36,9 @@ function coffeeStores(props) {
     return <div>loading...</div>;
   }
   const { name, address, neighbourhood, imgUrl } = props.coffeeStore;
+  function incrementLikes() {
+    console.log("liked");
+  }
   return (
     <>
       <div className={styles.layout}>
@@ -53,9 +57,22 @@ function coffeeStores(props) {
             </div>
             <Image src={imgUrl} width={600} height={360} className={styles.storeImg} alt={name} />
           </div>
-          <div className={styles.col2}>
-            <p>{address}</p>
-            <p>{neighbourhood}</p>
+          <div className={cls("glass", styles.col2)}>
+            <div className={styles.iconWrapper}>
+              <Image src="" alt="address" width={24} height={24} />
+              <p className={styles.text}>{address}</p>
+            </div>
+            <div className={styles.iconWrapper}>
+              <Image src="" alt="address" width={24} height={24} />
+              <p className={styles.text}>{neighbourhood}</p>
+            </div>
+            <div className={styles.iconWrapper}>
+              <Image src="" alt="address" width={24} height={24} />
+              <p className={styles.text}>1</p>
+            </div>
+            <button className={styles.upvoteButton} onClick={incrementLikes}>
+              Like
+            </button>
           </div>
         </div>
       </div>
