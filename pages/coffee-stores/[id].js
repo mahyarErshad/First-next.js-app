@@ -43,10 +43,14 @@ function coffeeStores(props) {
         </Head>
         <div className={styles.container}>
           <div className={styles.col1}>
-            <Link href="/">
-              <a>Back to home</a>
-            </Link>
-            <p>{name}</p>
+            <div className={styles.backToHomeLink}>
+              <Link href="/">
+                <a>Back to home</a>
+              </Link>
+            </div>
+            <div className={styles.nameWrapper}>
+              <h1 className={styles.name}>{name}</h1>
+            </div>
             <Image src={imgUrl} width={600} height={360} className={styles.storeImg} alt={name} />
           </div>
           <div className={styles.col2}>
