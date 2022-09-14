@@ -2,6 +2,7 @@ import Head from "next/head";
 import Link from "next/link";
 import { useRouter } from "next/router";
 import stores from "../../db/database.json";
+import styles from "../../styles/coffeeStore.module.css";
 
 export async function getStaticProps(staticProps) {
   const params = staticProps.params;
