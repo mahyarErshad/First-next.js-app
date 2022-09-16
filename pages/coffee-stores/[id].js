@@ -35,7 +35,7 @@ function coffeeStores(props) {
   if (router.isFallback) {
     return <div>loading...</div>;
   }
-  const { name, location, imgUrl } = props.coffeeStore;
+  const { name, location, image } = props.coffeeStore;
   function incrementLikes() {
     console.log("liked");
   }
@@ -55,7 +55,7 @@ function coffeeStores(props) {
             <div className={styles.nameWrapper}>
               <h1 className={styles.name}>{name}</h1>
             </div>
-            <Image src={imgUrl} width={600} height={360} className={styles.storeImg} alt={name} />
+            <Image src={image} width={600} height={360} className={styles.storeImg} alt={name} />
           </div>
           <div className={cls("glass", styles.col2)}>
             <div className={styles.iconWrapper}>
