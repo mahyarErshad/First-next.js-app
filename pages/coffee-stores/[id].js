@@ -30,7 +30,7 @@ export async function getStaticPaths() {
   };
 }
 
-function coffeeStores(props) {
+function CoffeeStores(props) {
   const router = useRouter();
   if (router.isFallback) {
     return <div>loading...</div>;
@@ -80,4 +80,4 @@ function coffeeStores(props) {
   );
 }
 
-export default coffeeStores;
+export default CoffeeStores;
