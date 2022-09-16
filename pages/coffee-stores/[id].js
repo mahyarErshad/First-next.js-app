@@ -35,7 +35,7 @@ function coffeeStores(props) {
   if (router.isFallback) {
     return <div>loading...</div>;
   }
-  const { name, address, neighbourhood, imgUrl } = props.coffeeStore;
+  const { name, location, imgUrl } = props.coffeeStore;
   function incrementLikes() {
     console.log("liked");
   }
@@ -60,11 +60,11 @@ function coffeeStores(props) {
           <div className={cls("glass", styles.col2)}>
             <div className={styles.iconWrapper}>
               <Image src="/static/icons/places.svg" alt="address" width={24} height={24} />
-              <p className={styles.text}>{address}</p>
+              <p className={styles.text}>{location.address}</p>
             </div>
             <div className={styles.iconWrapper}>
               <Image src="/static/icons/nearMe.svg" alt="near me" width={24} height={24} />
-              <p className={styles.text}>{neighbourhood}</p>
+              <p className={styles.text}>{location.neighborhood}</p>
             </div>
             <div className={styles.iconWrapper}>
               <Image src="/static/icons/star.svg" alt="Star" width={24} height={24} />
