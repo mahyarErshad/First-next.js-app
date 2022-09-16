@@ -13,7 +13,7 @@ function Card(props) {
               <h2 className={styles.cardHeader}>{props.title}</h2>
             </div>
             <div className={styles.cardImageWrapper}>
-              <Image className={styles.cardImage} src={props.image} width={260} height={160} />
+              <Image className={styles.cardImage} src={props.image} width={260} height={160} alt="image" />
             </div>
           </div>
         </a>
