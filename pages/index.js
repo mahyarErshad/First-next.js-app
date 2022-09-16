@@ -22,12 +22,12 @@ export default function Home(props) {
       </Head>
       <main className={styles.main}>
         <Banner buttonText="View stores nearby" />
-        {stores.length > 0 && (
+        {props.stores.results.length > 0 && (
           <>
             <h2 className={styles.heading2}>Toronto Stores</h2>
             <div className={styles.cardLayout}>
-              {props.stores.map((store) => {
-                return <Card key={store.id} image={store.imgUrl} title={store.name} link={`/coffee-stores/${store.id}`} className={styles.card} />;
+              {props.stores.results.map((store) => {
+                return <Card key={store.fsq_id} image={store.imgUrl || ""} title={store.name} link={`/coffee-stores/${store.fsq_id}`} className={styles.card} />;
               })}
             </div>
           </>
