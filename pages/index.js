@@ -27,7 +27,7 @@ export default function Home(props) {
             <h2 className={styles.heading2}>Toronto Stores</h2>
             <div className={styles.cardLayout}>
               {props.stores.results.map((store) => {
-                return <Card key={store.fsq_id} image={store.imgUrl || ""} title={store.name} link={`/coffee-stores/${store.fsq_id}`} className={styles.card} />;
+                return <Card key={store.fsq_id} image={store.image || ""} title={store.name} link={`/coffee-stores/${store.fsq_id}`} className={styles.card} />;
               })}
             </div>
           </>
