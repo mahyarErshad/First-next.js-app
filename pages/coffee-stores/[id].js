@@ -10,17 +10,17 @@ export async function getStaticProps(staticProps) {
   const params = staticProps.params;
   return {
     props: {
-      coffeeStore: stores.find((store) => {
-        return store.id.toString() === params.id;
+      coffeeStore: stores.results.find((store) => {
+        return store.fsq_id.toString() === params.id;
       }),
     },
   };
 }
 export async function getStaticPaths() {
-  const paths = stores.map((store) => {
+  const paths = stores.results.map((store) => {
     return {
       params: {
-        id: store.id.toString(),
+        id: store.fsq_id.toString(),
       },
     };
   });
