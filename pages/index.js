@@ -21,7 +21,7 @@ export default function Home(props) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={styles.main}>
-        <Banner buttonText="View stores nearby" />
+        <Banner />
         {props.stores.results.length > 0 && (
           <>
             <h2 className={styles.heading2}>Toronto Stores</h2>
