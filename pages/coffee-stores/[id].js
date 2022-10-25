@@ -33,10 +33,10 @@ export async function getStaticPaths() {
 
 function CoffeeStores(props) {
   const router = useRouter();
+  const [likes , setLikes] = useState(0)
   if (router.isFallback) {
     return <div>loading...</div>;
   }
-  const [likes , setLikes] = useState(0)
   const { name, location, image } = props.coffeeStore;
   function incrementLikes() {
     setLikes(prev => prev + 1)
