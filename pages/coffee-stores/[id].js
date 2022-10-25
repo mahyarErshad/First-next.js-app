@@ -5,6 +5,7 @@ import { useRouter } from "next/router";
 import stores from "../../db/database.json";
 import styles from "../../styles/coffeeStore.module.css";
 import cls from "classnames";
+import { useState } from "react";
 
 export async function getStaticProps(staticProps) {
   const params = staticProps.params;
@@ -35,9 +36,10 @@ function CoffeeStores(props) {
   if (router.isFallback) {
     return <div>loading...</div>;
   }
+  const [likes , setLikes] = useState(0)
   const { name, location, image } = props.coffeeStore;
   function incrementLikes() {
-    console.log("liked");
+    setLikes(prev => prev + 1)
   }
   return (
     <>
@@ -68,7 +70,7 @@ function CoffeeStores(props) {
             </div>
             <div className={styles.iconWrapper}>
               <Image src="/static/icons/star.svg" alt="Star" width={24} height={24} />
-              <p className={styles.text}>1</p>
+              <p className={styles.text}>{likes}</p>
             </div>
             <button className={styles.upvoteButton} onClick={incrementLikes}>
               Like
