@@ -1,4 +1,4 @@
-A simple budget app based on <a href="https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/" target="_blank" > Complete Next.js Developer in 2023: Zero to Mastery </a>
+Based on <a href="https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/" target="_blank" > Complete Next.js Developer in 2023: Zero to Mastery </a>
  by Ankita Kulkarni  
  
 ## Getting Started
