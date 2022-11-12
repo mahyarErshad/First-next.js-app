@@ -1,5 +1,6 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
+A simple budget app based on <a href="https://www.udemy.com/course/complete-nextjs-developer-zero-to-mastery/" target="_blank" > Complete Next.js Developer in 2023: Zero to Mastery </a>
+ by Ankita Kulkarni  
+ 
 ## Getting Started
 
 First, run the development server:
